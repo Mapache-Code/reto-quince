@@ -1,38 +1,240 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+.header {
+  position: relative;
+  padding: 2.8em 0 1em;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__hidden {
+  display: none;
+}
+.header__nav {
+  background: #fff;
+  width: 310px;
+  height: 230px;
+  position: absolute;
+  top: 7.2em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: -6px 6px 10px 2px #c9c8cd;
+  text-align: center;
+  z-index: 2;
+}
+.header__link {
+  display: block;
+  margin: 1.2em 0;
+  color: var(--Very-Dark-Blue);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header__link:last-child {
+  margin: 0 auto;
+  padding: 1.49em;
+  color: var(--Grayish-Blue);
+}
+.header__separator {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid var(--Light-Grayish-Blue);
+}
+@media only screen and (min-width: 768px) {
+  .header__nav {
+    width: 610px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .header__hidden {
+    background: none;
+    position: initial;
+    display: inline;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .header__icon {
+    display: none;
+  }
+  .header__link {
+    display: inline;
+    margin: 0 1em;
+  }
+  .header__link:last-child {
+    padding: 0;
+  }
+  .header__separator {
+    background: #c9c8cd;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin: 0 2em;
+    border-radius: 50%;
+  }
+}
+
+.main {
+  padding: 0 0 2em;
+}
+.main .container {
+  display: grid;
+  grid-template-rows: 400px 1fr;
+}
+.main__info {
+  grid-row-start: 2;
+}
+.main__info span:nth-child(2) {
+  letter-spacing: 2.8px;
+}
+.main__uppercase {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.main__uppercase--bold {
+  background: var(--Very-Dark-Blue);
+  margin-right: 0.8em;
+  padding: 0.2em 0.6em;
+  border-radius: 25px;
+  color: var(--Light-Grayish-Blue);
+  font-weight: 700;
+}
+.main__uppercase--normal {
+  color: var(--Grayish-Blue);
+  font-size: 1em;
+  font-weight: 400;
+}
+.main__image {
+  grid-row-start: 1;
+  position: relative;
+}
+.main__image img {
+  position: absolute;
+  left: -6%;
+  top: 12%;
+}
+.main__title {
+  margin: 0.4em 0;
+  color: var(--Very-Dark-Blue);
+  font-size: 2.2em;
+}
+.main__text {
+  width: 86%;
+  margin-bottom: 2em;
+  color: var(--Dark-Grayish-Blue);
+  font-size: 1em;
+}
+.main__button {
+  background: var(--Red);
+  margin-right: 1em;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 4px;
+  color: var(--Light-Grayish-Blue);
+  font-size: 0.9em;
+}
+@media only screen and (min-width: 768px) {
+  .main__image img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .main .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: calc(100vh - 100px);
+    align-items: center;
+  }
+  .main__info {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-bottom: 6em;
+    text-align: left;
+  }
+  .main__image {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .main__image img {
+    width: 860px;
+    height: 460px;
+    bottom: -80px;
+    left: 14%;
+  }
+}
+
+.footer {
+  padding: 2em 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer p {
+  font-size: 0.8em;
+  color: var(--Very-Dark-Blue);
+}
+.footer a {
+  font-size: 0.8em;
+  color: var(--Red);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+  --Red: #ff5c5c;
+  --Very-Dark-Blue: #242942;
+  --Dark-Grayish-Blue: #5b5f71;
+  --Grayish-Blue: #a0a1ac;
+  --Light-Grayish-Blue: #eef3f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+.background {
+  background: var(--Light-Grayish-Blue);
+  width: 185px;
+  height: 460px;
+  position: absolute;
+  right: 0;
+  border-bottom-left-radius: 62px;
+  z-index: -1;
+}
+
+.container {
+  padding: 0 1.8em;
+  overflow: hidden;
+}
+
+h1,
+button {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .background {
+    width: 385px;
+  }
+
+  .container {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .background {
+    width: 685px;
+    height: 430px;
+  }
+
+  .container {
+    padding: 0 5em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */

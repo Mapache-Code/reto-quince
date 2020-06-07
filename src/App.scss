@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+
+@import "./components/sass/Header.scss";
+@import "./components/sass/Main.scss";
+@import "./components/sass/Footer.scss";
+
+:root {
+  --Red: #ff5c5c;
+  --Very-Dark-Blue: #242942;
+  --Dark-Grayish-Blue: #5b5f71;
+  --Grayish-Blue: #a0a1ac;
+  --Light-Grayish-Blue: #eef3f6;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+.background {
+  background: var(--Light-Grayish-Blue);
+  width: 185px;
+  height: 460px;
+  position: absolute;
+  right: 0;
+  border-bottom-left-radius: 62px;
+  z-index: -1;
+}
+
+.container {
+  padding: 0 1.8em;
+  overflow: hidden;
+}
+
+h1,
+button {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .background {
+    width: 385px;
+  }
+
+  .container {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .background {
+    width: 685px;
+    height: 430px;
+  }
+  .container {
+    padding: 0 5em;
+  }
+}
