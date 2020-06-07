@@ -64,6 +64,7 @@
     border-radius: 4px;
     color: var(--Light-Grayish-Blue);
     font-size: 0.9em;
+    cursor: pointer;
   }
 
   @media only screen and (min-width: 768px) {
@@ -75,6 +76,10 @@
         margin: auto;
       }
     }
+
+    &__button:hover {
+      background: #ff8584;
+    }
   }
 
   @media only screen and (min-width: 1440px) {
@@ -83,7 +88,7 @@
     }
     .container {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: calc(115vh - 100px);
+      grid-template-rows: 700px;
       align-items: center;
     }
 
@@ -91,7 +96,7 @@
       grid-column-start: 1;
       grid-row-start: 1;
       text-align: left;
-      margin-bottom: 5em;
+      margin-bottom: 1.4em;
       span:nth-child(2) {
         letter-spacing: 4.6px;
       }
@@ -103,22 +108,22 @@
       img {
         width: 940px;
         height: auto;
-        bottom: 70px;
-        left: 14%;
+        bottom: 0px;
+        left: 12%;
       }
     }
 
     &__title {
-      font-size: 3.8em;
+      font-size: 4em;
     }
 
     &__text {
-      width: 55%;
-      font-size: 1.2em;
+      width: 50%;
+      font-size: 1.1em;
     }
 
     &__uppercase--normal {
-      letter-spacing: 2px;
+      letter-spacing: 2.4px;
     }
 
     &__button {

@@ -29,8 +29,14 @@ function Header() {
     <header className="header">
       <div className="container">
         <img className="header__logo" src={logo} alt="Logo" />
-        <div onClick={handleHamburger}>
-          <img id="icon" className="header__icon" src={hamburger} alt="Menu" />
+        <div>
+          <img
+            id="icon"
+            className="header__icon"
+            src={hamburger}
+            alt="Menu"
+            onClick={handleHamburger}
+          />
           <nav id="nav" className="header__nav header__hidden">
             <a href="/" className="header__link">
               Product

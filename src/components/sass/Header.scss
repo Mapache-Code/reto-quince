@@ -52,6 +52,10 @@
     &__nav {
       width: 610px;
     }
+
+    &__nav &__link:hover {
+      text-decoration: underline;
+    }
   }
 
   @media only screen and (min-width: 1440px) {
